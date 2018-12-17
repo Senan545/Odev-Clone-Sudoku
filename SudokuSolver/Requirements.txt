@@ -1,0 +1,47 @@
+﻿As a use I'd like to provide a file with Sudoku Puzzle,
+	and I would like to receive the solution or
+	info that solution can't be found
+When filename is valid and solved, show initial state and solved state
+This solver has to be extensible to make smarter
+
+Solution note:
+Chosen solution via backtracking algorithm
+Sudoku file to csv, 9 linii, rozdzielonych przecinkiem
+
+Flow:
+1. Get from user input - a path to sudoku file
+2. Read sudoku file
+3. If error - show error warening
+4. Convert Sudoku file into matrix
+5. verify if sudoku is not already solved
+	6. verify if records are valid
+	7. verify if columns are valid
+	8. verify if 3x3 box is valid
+9. Find 1st top-leftmost empty cell
+10. Place number there, starting with 1
+11. Repeat 6.-8.
+12 if valid, go to 9.
+13 if invalid, increment the value placed by 1
+14 if all numbers until 9 have been tested, and version with 9 is invalid, go back to last changed cell, and increment value placed there by 1
+15. verify if this is a complete sudoku puzzle (step 5.)
+16. if it's complete
+	17. declare solution found
+	18. display initial and final state
+19. if not solved, repeat step 9.
+20. If not solved in 10 seconds, display message that it can't be solved in 10 sec
+
+representation:
+Table is a ordered set of 81 cells which may each store 1 number from 1 to 9, or be empty
+Cell - can have 1 value 1-9, or be empty
+There can be 81 distinct Cells
+Row consists of 9 Cells
+Values in single row can't repeat
+Column consists of 9 Cells
+Values in single Column can't repeat
+Box consists of 3x3 Cells
+Values in single Box can't repeat
+Sudoku consists of 9 rows, 9 columns, and 9 boxes in the shape of 9x9 cell rectangle
+There is a Stack of alterations to Sudoku
+Alteration consists of address of specific Cell, and value that was used last
+NextCell returns address of next empty cell
+Backtrack returns address of previous altered cell and value that was last used
