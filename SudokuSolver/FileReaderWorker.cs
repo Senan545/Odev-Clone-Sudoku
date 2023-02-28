@@ -5,9 +5,9 @@ namespace SudokuSolver
 {
     class FileReaderWorker
     {
-        public FileReaderWorker ()
+        public FileReaderWorker()
         {
-            // nothing to do here commit
+            // nothing to do here
         }
 
         // this reads file, iterates over it, and calls a method to process each line as row
@@ -43,6 +43,8 @@ namespace SudokuSolver
 
             int columnNumber = 0;
 
+            // aşağıdakı foreach nedir? for gibi döngü müdür yoksa?
+
             foreach (string item in row)
             {
                 if (int.TryParse(item.Trim(), out int value))
@@ -65,6 +67,8 @@ namespace SudokuSolver
                     Console.WriteLine($"Can't convert value at line {currentRow + 1}");
                 }
                 columnNumber++;
+
+                Console.WriteLine("Bu satırı ben yazdım. Benim kim olduğumu bulun :) .....");
             }
         }
     }
