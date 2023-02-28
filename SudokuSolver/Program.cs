@@ -25,6 +25,8 @@ namespace SudokuSolver
                 Console.WriteLine("Could not solve sudoku");
             }
             Console.ReadLine();
+
+            // Acaba diger cs file olursa komitler ayni yerde gozukur mu?
         }
     }
 }
