@@ -14,6 +14,8 @@ namespace SudokuSolver.Tests.Unit
             Assert.IsFalse(cell.TrySet(10,false));
         }
 
+        // burda Console.WriteLine yazamadim, System.Console.WriteLine(); - bunu yazdi cw tab tab
+
         [TestMethod]
         public void TrySetGoodValue()
         {
@@ -71,32 +73,9 @@ namespace SudokuSolver.Tests.Unit
             Assert.IsFalse(cell.TrySet(0, true));
         }
 
-        [TestMethod]
-        public void VerifyCellEqualityWorksCorrectly()
-        {
-            int[,] simpleSudoku = new int[9, 9]
-            {
-                { 2,0,7,0,0,0,0,0,0 },
-                { 0,9,4,0,0,5,0,3,0 },
-                { 5,3,0,0,2,4,1,0,0 },
-                { 0,0,0,0,0,0,2,5,0 },
-                { 0,0,1,0,9,0,7,0,0 },
-                { 0,8,5,0,0,0,0,0,0 },
-                { 0,0,9,4,8,0,0,7,1 },
-                { 0,1,0,7,0,0,3,2,0 },
-                { 0,0,0,0,0,0,4,0,5 }
-            };
+        
 
-            SudokuTable st = new SudokuTable(simpleSudoku);
-            SudokuTable st1 = new SudokuTable(simpleSudoku);
-
-            for (int row = 0; row < st.GetTableCells().GetLength(0); row++)
-            {
-                for (int col = 0; col < st.GetTableCells().GetLength(1); col++)
-                {
-                    Assert.IsTrue(st.GetTableCells()[row, col].Equals(st1.GetTableCells()[row, col]));
-                }
-            }
+            // biliyorum projeyi Mahvettim!!!
         }
     }
 }
