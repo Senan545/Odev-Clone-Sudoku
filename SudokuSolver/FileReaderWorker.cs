@@ -7,7 +7,7 @@ namespace SudokuSolver
     {
         public FileReaderWorker ()
         {
-            // nothing to do here
+            // nothing to do here commit
         }
 
         // this reads file, iterates over it, and calls a method to process each line as row
