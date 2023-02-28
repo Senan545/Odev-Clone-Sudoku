@@ -15,8 +15,7 @@ namespace SudokuSolver
             Console.WriteLine("Sudoku table from file:");
             Console.WriteLine(newSudoku.ToString());
             
-            if (newSudoku.Solve(10))asdd
-            {
+//asjfakjfhskdfjh            {
                 Console.WriteLine("Solved sudoku:");
                 Console.WriteLine(newSudoku.ToString());
             }
