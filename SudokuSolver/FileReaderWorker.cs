@@ -43,7 +43,7 @@ namespace SudokuSolver
 
             int columnNumber = 0;
 
-            // aşağıdakı foreach nedir? for gibi döngü müdür yoksa?
+            // aşağıdakı foreach nedir? for gibi döngü müdür yoksa? // Cevap geldi mi?
 
             foreach (string item in row)
             {
